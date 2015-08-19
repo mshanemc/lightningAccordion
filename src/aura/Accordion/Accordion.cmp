@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="closeOthers" type="boolean" default="true"/>
+    <aura:attribute name="bootstrapStyles" type="boolean" default="true"/>
+    
+    <aura:handler event="c:AccordionOpenEvent" action="{!c.handleOpened}"/>
+
+    <aura:if isTrue="{!v.bootstrapStyles}">
+	    <ltng:require styles="/resource/bootstrapNamespaced/dist/css/bootstrap.min.css" />       
+    </aura:if>
+    
+    <div class="bs">{!v.body}</div>
+	
+</aura:component>

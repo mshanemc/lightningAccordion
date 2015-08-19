@@ -1,0 +1,17 @@
+<aura:component >
+	<aura:attribute name="panelHeading" type="Aura.Component[]"/>
+    <aura:attribute name="panelClass" type="string" default="panel panel-default"/>
+    <aura:attribute name="open" type="boolean" default="false"/>
+    
+    <aura:registerEvent name="AccordionOpenEvent" type="c:AccordionOpenEvent"/>
+    <!--aura:handler event="msmsf:AccordionOpenEvent" action="{!c.handleOpened}"/-->
+    <aura:handler event="c:PeerOpened" action="{!c.handleOpened}"/>
+    
+    <div class="{!v.panelClass}">
+    	<div class="panel-heading" onclick="{!c.toggleOpen}">{!v.panelHeading}</div>
+    	<aura:renderIf isTrue="{!v.open}">
+	        <div class="panel-body">{!v.body}</div>        
+        </aura:renderIf>
+    </div>
+    
+</aura:component>

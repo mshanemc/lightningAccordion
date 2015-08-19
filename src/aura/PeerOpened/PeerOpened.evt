@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="fired by accordion parent when another child is opened">
+    <aura:attribute name="openedPanel" type="Aura.Component[]"/>
+    <aura:attribute name="accordionId" type="string"/>
+</aura:event>

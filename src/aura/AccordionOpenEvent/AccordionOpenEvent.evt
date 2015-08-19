@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="to be fired when an accordion panel is opened">
+    <aura:attribute name="openedPanel" type="Aura.Component[]"/>
+    <aura:attribute name="accordionId" type="string"/>
+
+</aura:event>
